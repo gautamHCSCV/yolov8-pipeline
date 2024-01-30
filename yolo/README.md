@@ -1,0 +1,2 @@
+docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v C:\Users\GAUTAM\OneDrive\Desktop\yolo\models:/models nvcr.io/nvidia/tritonserver:23.08-py3 tritonserver --model-repository=/models --allow-metrics true --allow-gpu-metrics true --log-verbose 1 --log-info true --buffer-manager-thread-count 2 --model-control-mode explicit --load-model="*" --pinned-memory-pool-byte-size=4096 --cuda-memory-pool-byte-size=0:4096 --exit-timeout-secs=30 --strict-readiness=true
+
